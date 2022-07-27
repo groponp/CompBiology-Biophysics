@@ -10,6 +10,5 @@ If you're using any code, please cite our papers:
 5. Osorio-Mogollón et al. (2022) Attacking the SARS-CoV-2 Replication Machinery with the Pathogen Box’s Molecules, Letters in Drug Desing & Discovery, DOI: 10.2174/1570180819666220622085659 
 
 ==============================================================================
-````
-python rux.py 
-
+It secction given a brief overview of all tools here: 
+<span style="color:red">some *blue* text</span>.
