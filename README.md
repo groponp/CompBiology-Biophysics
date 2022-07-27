@@ -11,4 +11,9 @@ If you're using any code, please cite our papers:
 
 ====================================================================================
 It secction given a brief overview of all tools here: 
-
+1. BigBabel.py : It is a script that allows, to convert a large base (> 1 million molecules) of data in 1D-SDF format for PBQT useful to run massive molecular docking.
+2. 2_movie_render_fix.tcl: This script generates a video from a molecular dynamics trajectory in full HD, for this you have to have a VMD scene with all the parameters set (amb. occl, light, material, color, representation), that are of your interest.
+3. Co_mol_md.py: This is a simple script, which calculates the number of molecules that can be placed in a simulation box, based on their molar concentration, i.e. Imagine that you want to place 10 mM of Urea in your simulation box, this script will be able to calculate how many molecules you need to place to reach that concentration.
+4. DeltGtoKd.py/cpp: These two scripts do the same task, use the deltaG value of autodokc4/vina to calculate the dissociation constant (Kd) for a given molecule. In case of the python script it is useful for data < 1 Million , while the one written in C++ is more useful for data > 1 Million.
+5. FEL.py: It is a physical algorithm, which allows the use of two coordinate reactions (commonly RMSD, Rgyr) for a given biological system in order to find its Free Energy lanscape, and determine the sampled metastases. It generate un 2D plot too. 
+6. 
