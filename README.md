@@ -16,17 +16,34 @@ It secction given a brief overview of all tools here:
 3. Co_mol_md.py: This is a simple script, which calculates the number of molecules that can be placed in a simulation box, based on their molar concentration, i.e. Imagine that you want to place 10 mM of Urea in your simulation box, this script will be able to calculate how many molecules you need to place to reach that concentration.
 4. DeltGtoKd.py/cpp: These two scripts do the same task, use the deltaG value of autodokc4/vina to calculate the dissociation constant (Kd) for a given molecule. In case of the python script it is useful for data < 1 Million , while the one written in C++ is more useful for data > 1 Million.
 5. FEL.py: It is a physical algorithm, which allows the use of two coordinate reactions (commonly RMSD, Rgyr) for a given biological system in order to find its Free Energy lanscape, and determine the sampled metastases. It generate un 2D plot too. 
-
-6. Getseq.py: Este es un script, que permite obtener todas las posibles secuencias homólogas para un dado query de secuencias, y para taxones específicos, ya sea para modelar o realizar alineamientos múltiples. 
-7. MDEquiStats.py: Este es un script que permite extraer la información de la presión, temperatura, energía durante el proceso de equilibración en la dinámica molecular usando NAMD. 
-8. MakeMSA.R: Este es un simple código en R que permite hacer alineamiento de calidad y perfonalizarlos, en formato LaTex. 
-9. MolPack.tcl: Es largo script, que permite preparar sistemas den solución (como proteina en agua) y sistemás para realizar dinámica molecular de estiramiento. 
-10. OrientZ-axis.py: Este escript tomado una molécula y la orienta en Z axis, para su posterior uso, como en dinámica molecular de estiramiento. 
-11. autodock-vina-screening.sh: Es un script que permite correr virtual screening para una base de datos larga. 
-12. contact_map_prot.py: Este script permite encontrar el número de contactos que se da entre dos moléculas que interaccionan. Principalmente entre proteína-proteína. 
-13. convert-namd2charmm.py & convert-namd4gmx.py: Estos script convierten la topología y las coordenadas de NAMD/GRO para charmm. Tenga cuidao con esto, podría tener algunos errores si los archivos de input no son los correctos.
-14. essential-dynamics.sh: Este script permite procesar trayectorias de dinámica molecular obtener los modos normales del movimiento de una dada biomolécula. 
-15. get_box.tcl: Este script permite obtener las dimenciones y el del grid de docking, esto permite usar moléculas con más de 1M de átomos, sobrellevando la limitación de MGLTools. 
-16. harm-potential-us.py: Es un script que permite estimar la constante k en el bias potential 1/2k(w0-w1), para realizar umbrella sampling. 
-17. jazynski-tclforces.tcl: Este es un script basado en TCLForces 
+6. Getseq.py: This is a script, which allows to obtain all the possible homologous sequences for a given sequence query, and for specific taxa, either to model or perform multiple alignments.
+7. MDEquiStats.py: This is a script that allows to extract the information of pressure, temperature, energy during the equilibration process in molecular dynamics using NAMD.
+8. MakeMSA.R: This is a simple code in R that allows quality alignment and customization, in LaTex format.
+9. MolPack.tcl: It is a long script, which allows to prepare systems in solution (such as protein in water) and systems to perform stretching molecular dynamics.
+10. OrientZ-axis.py: This script takes a molecule and orients it on the Z axis, for later use, such as in molecular dynamics stretching.
+11. autodock-vina-screening.sh:It is a script that allows you to run virtual screening for a large database, from the conversion of the files to the processing of the results.
+12. contact_map_prot.py: This script allows you to find the number of contacts between two interacting molecules. Mainly between protein-protein.
+13. convert-namd2charmm.py & convert-namd4gmx.py: These scripts convert the topology and coordinates from NAMD/GRO to charmm. Be careful with this, you might get some errors if the input files are not correct.
+14. essential-dynamics.sh: This script allows processing molecular dynamics trajectories to obtain the normal modes of motion of a given biomolecule.
+15. get_box.tcl: This script allows to obtain the dimensions and the docking grid, this allows to use molecules with more than 1M atoms, overcoming the limitation of MGLTools.
+16. harm-potential-us.py: It is a script that allows estimating the constant k in the bias potential 1/2k(w0-w1), to carry out umbrella sampling.
+17. jazynski-tclforces.tcl: This is a script based on NAMD's TCLForces, to pull non-equilibrium dynamics.
+18. make_tclforces.tcl: This script generates the necessary files to be used in TCLForces.
+19. make_flooding.py: This script allows to generate a flooding system, i.e. a concentration of N ligand in the extracellular part of an aquaporin inserted in a membrane.
+20. make_segname.tcl: This is a script that allows you to add segname to the PDB files of a given system, to identify parts of a system, to facilitate analysis.
+21. mda_2Dmatrix_fix.py: This generates a 2D matrix of the conformational arrangement of a biomolecule.
+22. mda_convert-traj_fix.py: It interconverts NAMD/GROMACS path files.
+23. mda_(rgyr,rmsd,rmsf)_fix.py: These scripts perform Rgyr, RMSD, RMSF analysis on a NAMD/GROMACS trajectory.
+24. molywood_movie.tcl: This is a script based on the molywood library, which allows you to customize videos from simulation data in a more intuitive way.
+25. prepare_charmm_gui-inputs.py: This generates input fix for use in charmm-gui, mainly for preparing protein-ligand systems. 
+26. remove-PBC-effects.py:  This script removes the effects of PBC in a dynamic and makes further analysis suitable.
+27. remove_rot+trans.py: This script removes the rotation and translation movements to smooth the molecular dynamics trajectory and be able to visualize it without jump effects.
+28. running_analysis.sh: This is a meta-script that gives an example of running different scripts in python or another language in bash, to automate analysis on big data.
+29. sf2pdb_script.sh: This script uses openbabel to convert files from SDF to PDB.
+30. vitscreen_script.sh: This script uses autodockvina to run a virtual screening.
+31. vmd_merge_pdb_fix.tcl: This script merges multiple pdb files into a single file using the TopoTools library.
+32. vmd_reducetraj_fix.tcl:This script allows reducing the size of the trajectories of the molecular dynamics simulation, to have a better handling of them, on a workstation with little computational power.
+33. vmd_rmsd_to_beta_fix.tcl: This script adds the average RMSD values for the beta column of the PDB file and allows coloring based on this value.
+34. vmd_sasa_fix.py: This script allows to calculate the SASA value for a given selection.
+35. vmd_segid_to_chain_fix.tcl: This script adds the string name for a PBD from the SEGID.
 
