@@ -10,7 +10,6 @@ If you're using any code, please cite our papers:
 5. Osorio-Mogollón et al. (2022) Attacking the SARS-CoV-2 Replication Machinery with the Pathogen Box’s Molecules, Letters in Drug Desing & Discovery, DOI: 10.2174/1570180819666220622085659 
 
 ====================================================================================
-```
 It secction given a brief overview of all tools here: 
 1. BigBabel.py : It is a script that allows, to convert a large base (> 1 million molecules) of data in 1D-SDF format for PBQT useful to run massive molecular docking.
 2. 2_movie_render_fix.tcl: This script generates a video from a molecular dynamics trajectory in full HD, for this you have to have a VMD scene with all the parameters set (amb. occl, light, material, color, representation), that are of your interest.
@@ -30,4 +29,4 @@ It secction given a brief overview of all tools here:
 15. get_box.tcl: Este script permite obtener las dimenciones y el del grid de docking, esto permite usar moléculas con más de 1M de átomos, sobrellevando la limitación de MGLTools. 
 16. harm-potential-us.py: Es un script que permite estimar la constante k en el bias potential 1/2k(w0-w1), para realizar umbrella sampling. 
 17. jazynski-tclforces.tcl: Este es un script basado en TCLForces 
-```
+
