@@ -8,3 +8,8 @@ If you're using any code, please cite our papers:
 3. Otazu et al. (2020) Targeting Receptor Binding Domain and Cryptic Pocket of Spike glycoprotein from SARS-CoV-2 by biomolecular modeling, ARXIV Quantitative Biology, Biomolecules, DOI: https://doi.org/10.48550/arXiv.2006.06452
 4. Ropón-Palacios e tal. (2022) Glycosylation is key for enhancing drug recognition into spike glycoprotein of SARS-CoV-2, Computational Biology and Chemistry, DOI: https://doi.org/10.1016/j.compbiolchem.2022.107668
 5. Osorio-Mogollón et al. (2022) Attacking the SARS-CoV-2 Replication Machinery with the Pathogen Box’s Molecules, Letters in Drug Desing & Discovery, DOI: 10.2174/1570180819666220622085659 
+
+=========================================================================================================================================================
+````
+python rux.py 
+
