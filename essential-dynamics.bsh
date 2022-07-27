@@ -1,0 +1,23 @@
+##; This script run PCA analysis also know as Essential dynamics, which calculate 
+##; modes related to funcion into biomolecules, this permit atomselection and run over
+##; DCD trajectory. Install Prody for run this. 
+##; Write by Ropón-Palacios G. 
+##; Feb 10, 2021.  
+
+##; Input 
+dcd = $1 ##; this is trajectory in DCD format 
+pdb = $2 ##; this is protein contain coordinates for all atom necessary for run analysis 
+
+##; run EDA 
+
+prody eda ${dcd} --pdb ${pdb} \ 
+	-n 10 \ 
+	-s "protein and same residue as within 4 of resname LIG" \  
+	-p pdb_pca \ ##; output prefix. 
+	-A \ ##; all figures output. 
+        -F pdf \ ##; figures output format. 
+        -d 800 \ ##; figure resolution.
+	
+echo "EDA was run" 
+exit   
+
