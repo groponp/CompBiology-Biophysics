@@ -2,6 +2,8 @@
 It's an general repository containing multiple script for several task into computational biophysics or biology, which should be update frequently for me.
 If you've any questions, please write me to groponp@gmail.com. Programming lenguage used into this repo are: C++, Fortran95, Tcl, Python, Bash, AWK. 
 
+If you want get more detail about this script can join to our discord channel: https://discord.gg/ZGpAWtvW 
+
 If you're using any code, please cite our papers: 
 1. Ropón-Palacios et al.  (2020) Potential novel inhibitors against emerging zoonotic pathogen Nipah virus: a virtual screening and molecular dynamics approach, Journal of Biomolecular Structure and Dynamics, 38:11, 3225-3234, DOI: 10.1080/07391102.2019.1655480
 2. Ropón Palacios et al. (2019) Novel multi-epitope protein containing conserved epitopes from different Leishmania species as potential vaccine candidate: Integrated immunoinformatics and molecular dynamics approach, Computational Biology and Chemistry, DOI: https://doi.org/10.1016/j.compbiolchem.2019.107157.
