@@ -46,4 +46,5 @@ It secction given a brief overview of all tools here:
 33. vmd_rmsd_to_beta_fix.tcl: This script adds the average RMSD values for the beta column of the PDB file and allows coloring based on this value.
 34. vmd_sasa_fix.py: This script allows to calculate the SASA value for a given selection.
 35. vmd_segid_to_chain_fix.tcl: This script adds the string name for a PBD from the SEGID.
+36. RunHPCMD.sh: This is a long script that allows you to run NAMD/GROMACS molecular dynamics in a segmented manner. Example: Imagine that you have to run 100 ns of simulation, but you are running it on an HPC, which sets limited usage times per job (5 days maximum), and you cannot estimate the performance, so send the 100 ns in 5 days, it could result in an error, since it could not be completed, this script divides the simulation into discrete times and automatically resends them, until the entire simulation is completed.
 
