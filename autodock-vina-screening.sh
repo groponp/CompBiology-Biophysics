@@ -29,9 +29,9 @@ echo "processing ... geometry optimization using force field MMFF94"
 sleep 5 
 echo "¡Waiting ... !"
 sleep 10
-obminimize -ff MMFF94 -n 10000 -sd -c 1e-9 *.pdbqt  
+for k in *.pdbqt; do obminimize -ff MMFF94 -n 10000 -sd -c 1e-9 $k  > ${k%.pdbqt}_min.pdbqt #! fix bug to generate min. structure. 
 mkdir -p ligands 
-mv ligando_*.pdbqt ligands/ 
+mv ligando_*_min.pdbqt ligands/ 
 rm ligando_* 
 clear 
 echo "Ready to real Docking assay?"
@@ -44,7 +44,7 @@ for file in ligands/*; do
 	tmp=${file%.pdbqt}
 	name="${tmp##*/}"
 	echo "processing ... $name"
-	vina --config config.text --ligand $file --out $name.pdbqt --log $name.log --cpu 2 
+	vina --config config.text --ligand $file --out $name.pdbqt --log $name.log --cpu 4
 	awk '/^[-+]+$/{getline;print FILENAME,$0}' $name.log >> summary; done  
 #--Part2 sort best binding energy from autodock-vina 
 sort summary -nk 3 > summary_sorted.txt  
