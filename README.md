@@ -1,8 +1,10 @@
 # CompBiology-Biophysics
+<div style="text-align: justify">
 It's an general repository containing multiple script for several task into computational biophysics or biology, which should be update frequently for me.
 If you've any questions, please write me to groponp@gmail.com. Programming lenguage used into this repo are: C++, Fortran95, Tcl, Python, Bash, AWK. 
 
 If you want get more detail about this script can join to our discord channel: https://discord.gg/ZGpAWtvW 
+</div>
 
 ## Programming language 
 <img src="figures/python.png" width="40" height="40"> <img src="figures/gnu-bash.png" width="40" height="40"> <img src="figures/tcl.png" width="40" height="40"> <img src="figures/r.png" width="40" height="40"> <img src="figures/c-.png" width="40" height="40">
@@ -13,6 +15,7 @@ git clone git@github.com:groponp/CompBiology-Biophysics.git
 ```
 
 ## References
+<div style="text-align: justify">
 If you're using any code, please cite our papers: 
 1. Ropón-Palacios et al.  (2020) Potential novel inhibitors against emerging zoonotic pathogen Nipah virus: a virtual screening and molecular dynamics approach, Journal of Biomolecular Structure and Dynamics, 38:11, 3225-3234, DOI: 10.1080/07391102.2019.1655480
 2. Ropón Palacios et al. (2019) Novel multi-epitope protein containing conserved epitopes from different Leishmania species as potential vaccine candidate: Integrated immunoinformatics and molecular dynamics approach, Computational Biology and Chemistry, DOI: https://doi.org/10.1016/j.compbiolchem.2019.107157.
@@ -20,8 +23,10 @@ If you're using any code, please cite our papers:
 4. Ropón-Palacios e tal. (2022) Glycosylation is key for enhancing drug recognition into spike glycoprotein of SARS-CoV-2, Computational Biology and Chemistry, DOI: https://doi.org/10.1016/j.compbiolchem.2022.107668
 5. Osorio-Mogollón et al. (2022) Attacking the SARS-CoV-2 Replication Machinery with the Pathogen Box’s Molecules, Letters in Drug Desing & Discovery, DOI: 10.2174/1570180819666220622085659 
 6. Atanda et al. (2023). In silico study revealed the inhibitory activity of selected phytomolecules of C. rotundus against VacA implicated in gastric ulcer, Journal of Biomolecular Structure and Dynamics, DOI: https://doi.org/10.1080/07391102.2022.2160814 
+</div>
 
 ## Information of the Tools
+<div style="text-align: justify">
 It secction given a brief overview of all tools here: 
 1. <img src="figures/python.png" width="15" height="15"> BigBabel.py : It is a script that allows, to convert a large base (> 1 million molecules) of data in 1D-SDF format for PBQT useful to run massive molecular docking.
 2. <img src="figures/tcl.png" width="15" height="15"> 2_movie_render_fix.tcl: This script generates a video from a molecular dynamics trajectory in full HD, for this you have to have a VMD scene with all the parameters set (amb. occl, light, material, color, representation), that are of your interest.
@@ -60,6 +65,7 @@ It secction given a brief overview of all tools here:
 35. <img src="figures/tcl.png" width="15" height="15"> vmd_segid_to_chain_fix.tcl: This script adds the string name for a PBD from the SEGID.
 36. <img src="figures/gnu-bash.png" width="15" height="15"> RunHPCMD.sh: This is a long script that allows you to run NAMD/GROMACS molecular dynamics in a segmented manner. Example: Imagine that you have to run 100 ns of simulation, but you are running it on an HPC, which sets limited usage times per job (5 days maximum), and you cannot estimate the performance, so send the 100 ns in 5 days, it could result in an error, since it could not be completed, this script divides the simulation into discrete times and automatically resends them, until the entire simulation is completed.
 37. <img src="figures/python.png" width="15" height="15"> make_gmx_atom_index.py: It is a simple script, which allows to create atom index to gromacs, with a very simple selection, which is very similar to VMD, but based on MDAnalysis. For example in gromacs it is very difficult to create an index to restrict atoms to within 5 A of a given atom, but here this can be done in a simple way, "name CA around 5 of rename LIG", for example.
+</div>
 
 ## License 
 [MIT](https://choosealicense.com/licenses/mit/)
