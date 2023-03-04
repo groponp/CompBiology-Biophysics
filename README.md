@@ -14,7 +14,7 @@ If you want get more detail about this script can join to our discord channel: h
 git clone git@github.com:groponp/CompBiology-Biophysics.git
 ```
 
-## References
+## Citations
 If you're using any code, please cite our papers: 
 1. Ropón-Palacios et al.  (2020) Potential novel inhibitors against emerging zoonotic pathogen Nipah virus: a virtual screening and molecular dynamics approach, Journal of Biomolecular Structure and Dynamics, 38:11, 3225-3234, DOI: 10.1080/07391102.2019.1655480
 2. Ropón Palacios et al. (2019) Novel multi-epitope protein containing conserved epitopes from different Leishmania species as potential vaccine candidate: Integrated immunoinformatics and molecular dynamics approach, Computational Biology and Chemistry, DOI: https://doi.org/10.1016/j.compbiolchem.2019.107157.
@@ -66,7 +66,7 @@ It secction given a brief overview of all tools here:
 
 
 ## License 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Disclaimer
 Icons in this repo were taken from [flaticon](https://www.flaticon.com/free-icons/programming-language) 
