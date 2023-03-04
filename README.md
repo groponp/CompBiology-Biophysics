@@ -4,6 +4,13 @@ If you've any questions, please write me to groponp@gmail.com. Programming lengu
 
 If you want get more detail about this script can join to our discord channel: https://discord.gg/ZGpAWtvW 
 
+<img src="figures/cloud.jpeg">
+
+## Clone repo
+```bash
+git clone git@github.com:groponp/CompBiology-Biophysics.git
+```
+
 ## References
 If you're using any code, please cite our papers: 
 1. Ropón-Palacios et al.  (2020) Potential novel inhibitors against emerging zoonotic pathogen Nipah virus: a virtual screening and molecular dynamics approach, Journal of Biomolecular Structure and Dynamics, 38:11, 3225-3234, DOI: 10.1080/07391102.2019.1655480
@@ -14,7 +21,6 @@ If you're using any code, please cite our papers:
 6. Atanda et al. (2023). In silico study revealed the inhibitory activity of selected phytomolecules of C. rotundus against VacA implicated in gastric ulcer, Journal of Biomolecular Structure and Dynamics, DOI: https://doi.org/10.1080/07391102.2022.2160814 
 
 ## Information of the Tools
-====================================================================================
 It secction given a brief overview of all tools here: 
 1. BigBabel.py : It is a script that allows, to convert a large base (> 1 million molecules) of data in 1D-SDF format for PBQT useful to run massive molecular docking.
 2. 2_movie_render_fix.tcl: This script generates a video from a molecular dynamics trajectory in full HD, for this you have to have a VMD scene with all the parameters set (amb. occl, light, material, color, representation), that are of your interest.
