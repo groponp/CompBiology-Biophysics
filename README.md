@@ -4,7 +4,7 @@ If you've any questions, please write me to groponp@gmail.com. Programming lengu
 
 If you want get more detail about this script can join to our discord channel: https://discord.gg/ZGpAWtvW 
 
-# Programming language 
+## Programming language 
 <img src="figures/python.png" width="40" height="40"> <img src="figures/gnu-bash.png" width="40" height="40"> <img src="figures/tcl.png" width="40" height="40"> <img src="figures/r.png" width="40" height="40"> <img src="figures/c-.png" width="40" height="40">
 
 ## Clone repo
