@@ -3,11 +3,14 @@
 #! _date   : Feb 27, 2022. 
 #! _e-mail : groponp@gamil.com 
 
+#! Requerid MDAnalysis v 2.0.0 or later 
+
 import optparse 
 import subprocess 
 import MDAnalysis as mda 
 import numpy as np 
 import pandas as pd 
+from MDAnalysis.analysis import rms, align
 
 disclaimer="""<MDAnalysis RMSD Tool>"""
 parser = optparse.OptionParser(description=disclaimer) 
@@ -25,8 +28,13 @@ universe = mda.Universe(options.coord, options.traj)
 
 #! Define routine 
 def rmsf(traj, seltext1, ofile): 
-  from MDAnalysis.analysis import rms
-  u1 = traj 
+
+  u1 = traj  
+  #! Align Traj 
+  average = align.AverageStructure(u1, u1, select=options.sel, ref_frame=0).run()
+  ref = average.results.universe
+  aligner = align.AlignTraj(u1, ref, select=options.sel).run() # in_memory=True).run()
+  
   bb = u1.select_atoms(seltext1)
   r = rms.RMSF(bb).run() 
   resids = bb.resids 
