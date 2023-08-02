@@ -14,20 +14,25 @@ parser = optparse.OptionParser(description=disclaimer)
 #! INPUTS options
 parser.add_option("--file1", help="collective variable 1 [rgyr.dat]", type=str)
 parser.add_option("--file2", help="collective variable 2 [rmsd.dat]", type=str)
-parser.add_option("--temperature", help="temperature in Kelvin [i.e 310.0 ]", type=float)
-parser.add_option("--bin", help="bin  [default 25 ]", type=int)
+parser.add_option("--temperature", help="temperature in Kelvin [e.g 310.0 ]", type=float)
+parser.add_option("--bin", help="number of bins  [default 25 ]", type=int)
 
 #! OUTPUT options 
-#parser.add_option("--x_label", help=" r\"RMSD [$\AA$]\" ", type=str, action='store') 
-#parser.add_option("--y_label", help=" r\"Rgyr [$\AA$]\" ", type=str, action='store')
-parser.add_option("--ofile", help="type output name [FEL_LIG.svg]", type=str)
+parser.add_option("--x_label", help="RMSD [A]", type=str, action='store') 
+parser.add_option("--y_label", help="Rgyr [A]", type=str, action='store')
+parser.add_option("--ofile", help="name of output plot [FEL_LIG.png]", type=str)
 
 options, args = parser.parse_args() 
 
-
+# Equation is as ΔG(PC1,PC2)=−KBTln P(PC1,PC2) taken from: https://doi.org/10.3390/ijms23031746
+#==============================================================================================
 def free_energy_surface(file1, file2, temperature, i1):
     import math
     import numpy as np
+
+    tmp = options.ofile
+    outfilename2 = str(tmp.split["."][-1]) + ".dat"
+    ofile = open(outfilename2,'a+')   #open file for writing
 
     i2 = i1
     T = float(temperature)
@@ -72,13 +77,19 @@ def free_energy_surface(file1, file2, temperature, i1):
         for y in range(i2):
             if V[x][y] == 0:
                 DG[x][y] = 10
+                # Write file
+                ofile.write((str((2*minv1+(2*x+1)*I1/i1)/2) + "\t" + str((2*minv2+(2*y+1)*I2/i2)/2) + "\t" + str(DG[x][y])+"\n"))
                 continue
             else:
                 DG[x][y] = -0.001*An*kB*T*(math.log(V[x][y])-LnPmax) #kcal/mol
+                # Write file
+                ofile.write((str((2*minv1+(2*x+1)*I1/i1)/2) + "\t" + str((2*minv2+(2*y+1)*I2/i2)/2) + "\t" + str(DG[x][y])+"\n"))
+        ofile.write("\n") 
 
     return DG
 
 #### Funcion para generar plots de FEL
+#!========================================================================================
 def plot_fel(file1,file2,dataframe,labels,titulo):
     z_l = r'$\Delta G$'+' [kcal/mol]' #using latex in matplotlib
     rangos = [file2.min(),file2.max(),file1.min(),file1.max()]
@@ -128,23 +139,31 @@ plt.rcParams['ytick.labelsize'] = 15
 plt.rcParams['legend.fontsize'] = 15
 plt.rcParams['figure.titlesize'] = 15
 
-#types = { 'roto': r"$RMSD/Å$",
- #         'angl': r"$Rgyr/Å$"}
-
 #! Define all varibales I/O 
 file1 = options.file1
 file2 = options.file2
 ofile = options.ofile 
-#xlabel = options.x_label 
-#ylabel = options.y_label 
+xlabel = options.x_label 
+ylabel = options.y_label 
 temp = options.temperature 
 bin_h = options.bin 
 
 #! Run routines
+#!=================================================================================
+#! Remenber colum 1 into colvars `dat` file will can containing colvar information
+#! colum 0, containing any other information. 
+#! View:
+#! -------------
+#! Time      RMSD 
+#!  1         2
+#!  2         3
+#!  ...       4
+#! It Example show the format the colvars files. 
+
 v1 = np.genfromtxt(file1, usecols=1, delimiter='\t', skip_header=1)
 v2 = np.genfromtxt(file2, usecols=1, delimiter='\t', skip_header=1)
 
 fel = free_energy_surface(v1,
                           v2, temp, bin_h)
 
-plot_fel(v1,v2,fel,[r"Rgyr [$\AA$]", r"RMSD [$\AA$]"], ofile)
+plot_fel(v1,v2,fel,[xlabel, ylabel], ofile)
