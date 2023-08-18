@@ -12,6 +12,7 @@
 # - It now version is util for NAMD and GROMACS into membrane or solutions.
 # - Not use in_memory speed transformations, but write is slow.
 # - Add secction into pbFix method to enable pbctools from VMD (more fast)
+# - Add to my github
 #########-#########-#########-#########-#########-#########-#########-#########
 
 import MDAnalysis as mda 
