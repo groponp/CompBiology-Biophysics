@@ -37,14 +37,14 @@ if PSF:
 	system = u2.select_atoms(options.sel)
 	with MDAnalysis.Writer(options.otraj, system.n_atoms) as W:
     		for ts in u2.trajectory:
-        	W.write(system)
+        		W.write(system)
         	print ("Converted frame %d" % ts.frame)
 if COORD: 
 	u2 = MDAnalysis.Universe(COORD, TRAJ)
 	system = u2.select_atoms(options.sel)
 	with MDAnalysis.Writer(options.otraj, system.n_atoms) as W:
     		for ts in u2.trajectory:
-        	W.write(system)
+        		W.write(system)
         	print ("Converted frame %d" % ts.frame)
 
 
