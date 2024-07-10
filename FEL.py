@@ -2,9 +2,6 @@
 #! _author : Ropón-Palacios G. 
 #! _date   : March 9, 2022. 
 #! _e-mail : groponp@gamil.com
-#!
-#! 
-
 
 import optparse 
 import subprocess 
